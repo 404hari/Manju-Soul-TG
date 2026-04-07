@@ -12,7 +12,7 @@ SOULTG = Client(
     name="Manju",
     api_id= "19383278",
     api_hash= "6e6c8100d5564c59bfd82a7a86aadb95",
-    bot_token= "6765813090:AAE6MgNRL6GeHGPPalhJf7fXv875gv4nSs0"
+    bot_token= "7420317399:AAE5mHLDtn7HuPxaaFwYEj9arGahTCE0qdQ"
 )
 
 PICS = [
@@ -26,35 +26,7 @@ PICS = [
 
 @SOULTG.on_message(filters.command("start"))
 async def start_cmd(client, message):
-    if force_channel:
-        try:
-            user = await client.get_chat_member(force_channel, message.from_user.id)
-            if user.status == "kicked out":
-                await message.reply_text("You Are Banned")
-                return
-        except UserNotParticipant :
-            await message.reply_text(
-                text="PLEASE SUBSCRIBE MY CHANNEL TO USE ME DEAR 😁",
-                reply_markup=InlineKeyboardMarkup( [[
-                 InlineKeyboardButton("⚡️𝘾𝙃𝘼𝙉𝙉𝙀𝙇⚡️", url=f"t.me/{force_channel}")
-                 ]]
-                 )
-            )
-            return
     await message.reply_photo(
-        
-    m = datetime.datetime.now(),
-        
-    time = m.hour  
-        
-    if time < 12
-        get="GOOD MORNING DEAR"  
-    elif time < 15
-        get="GOOD AFTERNOON DEAR" 
-    elif time < 20
-        get="GOOD EVENING DEAR"   
-    else:
-        get="GOOD NIGHT DEAR"
         photo=random.choice(PICS),
         caption=START_MESSAGE.format{get} (message.from_user.mention),
         reply_markup=InlineKeyboardMarkup( [[
