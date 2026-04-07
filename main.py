@@ -3,10 +3,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.types import CallbackQuery
 import random
 import datetime
-from pyrogram.errors import UserNotParticipant
-
-
-force_channel = "SoulBotzz"
 
 SOULTG = Client(
     name="Manju",
